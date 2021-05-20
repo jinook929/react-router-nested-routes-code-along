@@ -21,8 +21,8 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
-          <Route exact path="/" render={() => <div>Home</div>} />
-          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
+          <Route exact path="/" render={() => <div><h1>Home</h1></div>} />
+          <Route path='/movies' render={routerProps => {console.log("App routerProps", routerProps); return <MoviesPage {...routerProps} movies={this.state.movies}/>}} />
         </div>
       </Router>
     );
